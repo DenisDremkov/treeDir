@@ -1,0 +1,6 @@
+<ul>
+	<li  data-ng-repeat = "(key, value) in parent" id = "{{parent[key].id}}" ng-click = 'showChild(parent[key].path, parent[key].type, parent[key].id, $event)'  ng-class = "(parent[key].type === 'file')? '' : 'click_element'">
+		<i ng-class="typeIcon(parent[key].type)" aria-hidden="true"></i>
+		<span>{{parent[key].name}}</span>
+	</li>
+</ul>

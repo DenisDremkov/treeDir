@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" data-ng-app="treeDir">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="libs/jquery/jquery-ui.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/awesome/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/awesome/fonts.css">
+	<link rel="stylesheet" href="css/screen.css">
+	<title>app</title>
+</head>
+<body data-ng-controller="mainCtrl" data-ng-cloak>
+	<header>
+		<h1>SPA "файловая структура сервера"</h1>
+	</header>
+	<div id = "#main" class="container" >
+		<div class="row">
+			<div id="experiments" class="col-xs-3">
+				<div class="inner_wrap">
+					<h2>Експеримент</h2>
+					<p>Добавить новую директорию в папку<br>"FOLDER_<br>FOR_<br>EXPERIMENTS"</p>
+					<input type="text" data-ng-model = "nameNewDirExperiment" data-ng-change = "validValNameDir()" class="form-control" placeholder="имя директории">
+					<span id="danger_msg_experiment">{{userMessage}}</span>
+					<button data-ng-click="addNewDirExperiment()" data-ng-disabled ="validBtnAddNewDir" class="btn btn-primary">добавить <br>новую<br> директорию</button>
+					<ul>
+						<li data-ng-repeat="dir in arrNameNewDirExperiment">директория : {{dir}}</li>
+					</ul>
+				</div>
+			</div>
+			<div id="main_catalog" class="col-xs-7">
+				<div class="inner_wrap">
+					<h2>Корневой каталога</h2>
+					<ul>
+						<li data-item-dir></li>
+					</ul>
+				</div>
+			</div>
+			<div id="vidget" class="col-xs-2">
+				<div class="inner_wrap">
+					<h2>Виджет<br><span>(содержание выбранного каталога)</span></h2>
+					<ul >
+						<li  data-ng-repeat = "(key, value) in vidget" id = "{{vidget[key].id}}" ng-click = 'showChild(vidget[key].path, vidget[key].type, vidget[key].id, $event)'  data-ng-class = "(vidget[key].type === 'file')? '' : 'click_element'">
+							<i data-ng-class="typeIcon(vidget[key].type)" aria-hidden="true"></i>
+							<span>{{vidget[key].name}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- sokcet.io -->
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<!-- jquery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- AngularJS v1.5.3  -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular/socket.min.js"></script>
+	<!-- app -->
+	<script type="text/javascript" src="js/appTree.js"></script>
+	<!-- controllers -->
+	<script type="text/javascript" src="js/ctrl/mainCtrl.js"></script>
+	<!-- services -->
+	<script type="text/javascript" src="js/service/mainFactory.js"></script>
+	<script type="text/javascript" src="js/service/socketFactory.js"></script>
+	<script type="text/javascript" src="js/service/scanServerDirSocketFactory.js"></script>
+	<!-- directive -->
+	<script type="text/javascript" src="js/directive.js"></script>
+	<!-- url -->
+	<script type="text/javascript" src="js/url.js"></script>
+	
+
+</body>
+</html>

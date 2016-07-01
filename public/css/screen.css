@@ -1,0 +1,204 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 11, ../sass/screen.scss */
+body {
+  font-size: 16px;
+  color: #000;
+}
+@media (max-width: 992px) {
+  /* line 11, ../sass/screen.scss */
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 11, ../sass/screen.scss */
+  body {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  /* line 11, ../sass/screen.scss */
+  body {
+    font-size: 10px;
+  }
+}
+
+/* line 24, ../sass/screen.scss */
+.clearfloat:after,
+.clearfloat:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 30, ../sass/screen.scss */
+.container {
+  margin-top: 30px;
+}
+
+/* line 33, ../sass/screen.scss */
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* line 40, ../sass/screen.scss */
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* line 44, ../sass/screen.scss */
+h1 {
+  margin-top: 50px;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* line 49, ../sass/screen.scss */
+.inner_wrap {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+/* line 52, ../sass/screen.scss */
+.inner_wrap h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 60, ../sass/screen.scss */
+#experiments {
+  text-align: center;
+}
+/* line 62, ../sass/screen.scss */
+#experiments input,
+#experiments button {
+  margin: 15px auto;
+  text-align: center;
+}
+/* line 68, ../sass/screen.scss */
+#experiments .inner_wrap p {
+  margin: 15px auto;
+}
+
+/* line 77, ../sass/screen.scss */
+#vidget .inner_wrap h2 span {
+  font-size: 0.6em;
+}
+
+/* line 83, ../sass/screen.scss */
+#danger_msg_experiment {
+  color: red;
+}
+
+/* line 88, ../sass/screen.scss */
+#main_catalog ul li {
+  margin: 5px;
+}
+
+/* line 94, ../sass/screen.scss */
+.click_element > span {
+  cursor: pointer;
+}
+
+/* line 98, ../sass/screen.scss */
+.wrap_for_child {
+  display: block;
+  margin-left: 20px;
+}
+
+/* line 103, ../sass/screen.scss */
+.current_dir > span {
+  color: red;
+}
+/* line 105, ../sass/screen.scss */
+.current_dir > i:before {
+  color: red;
+}
+
+/* line 111, ../sass/screen.scss */
+ul li {
+  border-bottom: 1px solid #ccc;
+}
+/* line 113, ../sass/screen.scss */
+ul li i {
+  margin-right: 5px;
+}
+/* line 114, ../sass/screen.scss */
+ul li button {
+  margin-left: 15px;
+  font-size: 0.8em;
+  padding: 2px;
+}

@@ -1,0 +1,120 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+	//GENERAL OPTIONS 
+// #=============================================
+	body {
+		font-size: 16px;
+		color: #000;
+		@media (max-width:992px) {
+			font-size: 14px;
+		}
+		@media (max-width:768px) {
+			font-size: 12px;
+		}
+		@media (max-width:500px) {
+			font-size: 10px;
+		}
+	}
+	.clearfloat:after, 
+	.clearfloat:before {
+		content:"";
+		display: table;
+		clear:both;
+	}
+	.container {
+		margin-top: 30px;
+	}
+	a,
+	a:hover,
+	a:focus {
+		text-decoration: none;
+	}
+	input,
+	button {
+		&:focus {
+			outline: none;
+		}
+	}
+h1 {
+	margin-top: 50px;
+	font-size: 2em;
+	text-align: center;
+}	
+.inner_wrap {
+	padding: 15px;
+	border: 1px solid #ccc;
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+}
+#experiments {
+	text-align: center;
+	input,
+	button {
+		margin: 15px auto;
+		text-align: center;
+	}
+	.inner_wrap {
+		p {
+			margin: 15px auto;
+		}
+	}
+}
+
+#vidget {
+	.inner_wrap {
+		h2 {
+			span {
+				font-size: 0.6em;
+			}
+		}
+	}
+}
+#danger_msg_experiment {
+	color: red;
+}
+#main_catalog {
+	ul {
+		li {
+			margin: 5px;
+		}
+	}
+}
+.click_element {
+	>span {
+		cursor: pointer;
+	}
+}
+.wrap_for_child {
+	display: block;
+	margin-left: 20px;
+}
+.current_dir {
+	>span {color: red};
+	>i {
+		&:before {
+			color: red;
+		}
+	}
+}
+ul {
+	li {
+		border-bottom: 1px solid #ccc;
+		i {margin-right: 5px}
+		button {
+			margin-left: 15px;
+			font-size: 0.8em;
+			padding: 2px;
+		}
+	}
+}
